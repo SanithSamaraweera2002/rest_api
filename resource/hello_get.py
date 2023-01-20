@@ -8,7 +8,7 @@ class HelloGet(Resource):
         user = Users.find_by_user_name(user_name=data)
         user.delete_user()
 
-
+        return 'User Deleted'
 
         #return {
         #    'name': user.emp_name,
