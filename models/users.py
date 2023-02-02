@@ -25,4 +25,8 @@ class Users(db.Model):
     def find_by_user_name(cls,user_name):
         return cls.query.filter(cls.user_name == user_name).first()
 
+    @classmethod
+    def find_by_id(cls, user_id):
+        return cls.query.filter(cls.id == user_id).first()
+
 
